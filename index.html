@@ -1,0 +1,39 @@
+<html>
+
+<style>
+#marquee {
+  width: 200px;
+  margin: 0 auto;
+/*  overflow: hidden;*/
+  background-color: blue;
+}
+
+.scrollingText {
+	position: relative;
+	right: -200px;
+
+  font-family: sans-serif;
+  font-size: 24px;
+}
+
+.end {
+  right: 150px;
+  transition: all 5s linear;
+}
+
+
+
+</style>
+
+
+<div id="marquee"><span class="scrollingText">Scrolling text</span></div>
+    
+    
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    setInterval(function(){
+        $(".scrollingText").removeClass("end");
+        $(".scrollingText").addClass("end");
+    }, 5000);
+    </script>
+</html>
